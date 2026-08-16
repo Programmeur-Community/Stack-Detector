@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Découvrez les technologies utilisées sur un site web en quelques secondes gratuitement et sans inscription." />
+    <meta name="keywords" content="detecteur, detector, detection, stack, technique, site web, application, technologie, analyse, scan, framework, html, css, web, decouvrir" />
+    <meta name="author" content="Programmeur" />
+    <meta property="og:title" content="Stack Detector" />
+    <meta property="og:description" content="Découvre les technologies utilisées sur un site web en quelques secondes gratuitement et sans inscription."" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://stack-detector.vercel.app/" />
+    <meta property="og:image" content="" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stack Detector" />
+    <meta name="twitter:description" content="Découvre les technologies utilisées sur un site web en quelques secondes gratuitement et sans inscription."" />
+    <meta name="twitter:image" content="" />
+
+    <title>Détecteur de Stack</title>
+    
+    <link rel="canonical" href="https://stack-detector.vercel.app/" />
+    <link
+    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-100">
+    {% include "_header.html" %}
+
+    <main
+      class="flex flex-col gap-5 min-h-[75vh] items-center justify-center p-2 sm:p-6 lg:flex-row lg:items-stretch"
+    >
+      {% include "_history.html" %}
+
+      <!-- Formulaire -->
+      <div
+        class="flex flex-col justify-center bg-white w-full rounded-xl border border-slate-200 p-4 sm:p-6 max-w-4xl space-y-6 lg:max-w-[calc(100%-40%)] lg:flex-1"
+      >
+        <div class="text-center flex flex-col items-center gap-2">
+          <h1
+            class="text-2xl font-black text-slate-700 sm:text-3xl md:text-4xl"
+          >
+            Détecteur de stack
+          </h1>
+          <p class="text-slate-500 text-sm mt-1 max-w-lg">
+            Découvrez les technologies utilisées sur un site web en quelques
+            secondes gratuitement et sans inscription.
+          </p>
+        </div>
+
+        <!-- formulaire -->
+        <form
+          id="stackForm"
+          method="post"
+          class="flex flex-col sm:flex-row gap-2 sm:gap-3"
+        >
+          <input
+            type="url"
+            name="url"
+            id="url"
+            class="bg-white text-slate-600 sm:text-xl w-full rounded-md sm:rounded-xl border border-slate-200 sm:border-2 focus:shadow-2xs focus:border-slate-400 placeholder-slate-300 placeholder:select-none p-3 sm:px-5 sm:py-4 disabled:opacity-50 disabled:pointer-events-none transition-all"
+            placeholder="https://www.programmeur-community.com/"
+            autofocus
+            required
+          />
+          <button
+            type="submit"
+            id="submitBtn"
+            class="bg-slate-800 text-white p-5 rounded-xl flex items-center hover:bg-neutral-950 disabled:opacity-50 disabled:pointer-events-none hidden sm:block transition-colors"
+            title="Rechercher"
+          >
+            <i class="fa-solid fa-search"></i>
+          </button>
+          <button
+            type="submit"
+            id="submitBtn"
+            class="inline-flex items-center justify-center bg-slate-800 text-white mt-2 p-3 rounded-md hover:bg-neutral-950 disabled:opacity-50 disabled:pointer-events-none sm:hidden transition-colors"
+            title="Rechercher"
+          >
+            Analyser
+          </button>
+        </form>
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <ul style="margin-top: 8px">
+          {% for message in messages %}
+          <li class="text-[11px] text-red-500">{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %} {% endwith %}
+      </div>
+    </main>
+
+    {% include "_footer.html" %}
+  </body>
+</html>

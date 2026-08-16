@@ -1,0 +1,502 @@
+[
+  {
+    "id": "next-js",
+    "name": "Next.js",
+    "description": "Framework React pour le déploiement de applications web côté serveur et côté client",
+    "category": "Frontend",
+    "website": "https://nextjs.org/",
+    "rules": {
+      "headers": [{ "name": "x-powered-by", "pattern": "Next\\.js" }],
+      "meta": [{ "name": "next-head-count" }],
+      "scripts": ["/_next/static/"],
+      "links": ["/_next/static/"],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "description": "Bibliothèque JavaScript pour interfaces utilisateur",
+    "category": "Frontend",
+    "website": "https://reactjs.org/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [
+        "react(?:-dom)?\\.(?:production|development|min)?\\.js",
+        "react-dom",
+        "react(?:-dom)?(?:[.-]|/|$)"
+      ],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": ["data-reactroot", "data-reactid"]
+    }
+  },
+  {
+    "id": "vue-js",
+    "name": "Vue.js",
+    "description": "Framework JavaScript progressif pour construire des interfaces utilisateur",
+    "category": "Frontend",
+    "website": "https://vuejs.org/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [
+        "vue(?:-router|-store)?\\.(?:production|development|min)?\\.js"
+      ],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "nuxt-js",
+    "name": "Nuxt.js",
+    "description": "Framework Vue.js pour le rendu côté serveur et la génération de sites statiques",
+    "category": "Frontend",
+    "website": "https://nuxtjs.org/",
+    "rules": {
+      "headers": [{ "name": "x-powered-by", "pattern": "Nuxt(?:\\.js)?\\b" }],
+      "meta": [],
+      "scripts": ["/_nuxt/"],
+      "links": ["/_nuxt/"],
+      "cookies": ["nuxt-color-mode"],
+      "html_classes": [],
+      "attributes": ["data-nuxt-id", "data-island"]
+    }
+  },
+  {
+    "id": "angular",
+    "name": "Angular",
+    "description": "Framework pour construire des applications web côté client",
+    "category": "Frontend",
+    "website": "https://angular.io/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": ["ng-version", "ng-server-context", "ng-app-id"]
+    }
+  },
+  {
+    "id": "svelte",
+    "name": "Svelte",
+    "description": "Framework JavaScript pour construire des interfaces utilisateur",
+    "category": "Frontend",
+    "website": "https://svelte.dev/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": ["\\bsvelte-"],
+      "attributes": []
+    }
+  },
+  {
+    "id": "express-js",
+    "name": "Express.js",
+    "description": "Framework web minimaliste pour Node.js",
+    "category": "Backend",
+    "website": "https://expressjs.com/",
+    "rules": {
+      "headers": [{ "name": "x-powered-by", "pattern": "Express" }],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "nestjs",
+    "name": "NestJS",
+    "description": "Framework Node.js pour construire des applications côté serveur",
+    "category": "Backend",
+    "website": "https://nestjs.com/",
+    "rules": {
+      "headers": [{ "name": "x-powered-by", "pattern": "NestJS" }],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "php",
+    "name": "PHP",
+    "description": "Langage de programmation côté serveur pour le développement web",
+    "category": "Backend",
+    "website": "https://php.net/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": ["PHPSESSID"],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "laravel",
+    "name": "Laravel",
+    "description": "Framework PHP pour le développement web",
+    "category": "Backend",
+    "website": "https://laravel.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": ["laravel_session", "XSRF-TOKEN"],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "symfony",
+    "name": "Symfony",
+    "description": "Framework PHP pour le développement web",
+    "category": "Backend",
+    "website": "https://symfony.com/",
+    "rules": {
+      "headers": [{ "name": "X-Symfony-Cache", "pattern": "hit" }],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": ["MFSID", "PHPSESSID", "REMEMBERME"],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "django",
+    "name": "Django",
+    "description": "Framework Python robuste pour le développement web",
+    "category": "Backend",
+    "website": "https://www.djangoproject.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": ["sessionid", "csrftoken"],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "flask",
+    "name": "Flask",
+    "description": "Micro-framework Python pour le développement web",
+    "category": "Backend",
+    "website": "https://flask.palletsprojects.com/",
+    "rules": {
+      "headers": [
+        { "name": "server", "pattern": "Werkzeug" },
+        { "name": "server", "pattern": "gunicorn" }
+      ],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "fastapi",
+    "name": "FastAPI",
+    "description": "Framework web moderne pour construire des APIs avec Python",
+    "category": "Backend",
+    "website": "https://fastapi.tiangolo.com/",
+    "rules": {
+      "headers": [
+        { "name": "server", "pattern": "uvicorn" },
+        { "name": "server", "pattern": "Hypercorn" }
+      ],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "spring",
+    "name": "Spring",
+    "description": "Framework Java pour le développement d'applications web robustes",
+    "category": "Backend",
+    "website": "https://spring.io/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": ["JSESSIONID"],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "wordpress",
+    "name": "WordPress",
+    "description": "CMS basé sur PHP pour la création de sites web",
+    "category": "CMS",
+    "website": "https://wordpress.org/",
+    "rules": {
+      "headers": [],
+      "meta": [{ "name": "generator", "pattern": "WordPress" }],
+      "scripts": ["wp-content", "wp-includes"],
+      "links": [],
+      "cookies": ["wordpress_logged_in"],
+      "html_classes": ["\\bwp-block-\\b"],
+      "attributes": []
+    }
+  },
+  {
+    "id": "tailwind-css",
+    "name": "Tailwind CSS",
+    "description": "Framework CSS utilitaire pour créer des interfaces utilisateur personnalisées",
+    "category": "Frontend",
+    "website": "https://tailwindcss.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [
+        "tailwindcss",
+        "cdn\\.tailwindcss\\.com",
+        "tailwind(?:\\.min)?\\.js"
+      ],
+      "links": ["tailwind(?:\\.min)?\\.css"],
+      "cookies": [],
+      "html_classes": [
+        "\\b(items-|space-y-|divide-|font-|bg-|inline-|place-items-|select-|hover:)\\b",
+        "w-full",
+        "flex-col",
+        "text-sm"
+      ],
+      "attributes": []
+    }
+  },
+  {
+    "id": "bootstrap",
+    "name": "Bootstrap",
+    "description": "Framework CSS pour le développement d'interfaces utilisateur réactives",
+    "category": "Frontend",
+    "website": "https://getbootstrap.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": ["bootstrap\\.bundle(?:\\.min)?\\.js"],
+      "links": ["bootstrap(?:\\.min)?\\.css"],
+      "cookies": [],
+      "html_classes": [
+        "\\b(justify-content-|align-items-|col-lg-|alert-|btn-|offcanvas-|vh-|visually-hidden-)\\b",
+        "form-control",
+        "d-flex"
+      ],
+      "attributes": []
+    }
+  },
+  {
+    "id": "jquery",
+    "name": "jQuery",
+    "description": "Bibliothèque JavaScript pour simplifier la manipulation du DOM et les requêtes AJAX",
+    "category": "Frontend",
+    "website": "https://jquery.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": ["jquery-(?:[0-9]+\\.)+[0-9]+(?:\\.min)?\\.js", "jquery(?:\\.min)?\\.js"],
+      "links": ["jquery\\.com"],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "htmx",
+    "name": "HTMX",
+    "description": "Bibliothèque JavaScript pour créer des applications web réactives avec HTML",
+    "category": "Frontend",
+    "website": "https://htmx.org/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": ["htmx(?:\\.min)?\\.js"],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": ["hx-"]
+    }
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "description": "PaaS pour le déploiement d'applications web et de sites statiques",
+    "category": "Infrastructure",
+    "website": "https://vercel.com/",
+    "rules": {
+      "headers": [
+        { "name": "server", "pattern": "Vercel" },
+        { "name": "x-vercel-id", "pattern": "cpt\\d+::" }
+      ],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "netlify",
+    "name": "Netlify",
+    "description": "PaaS pour le déploiement d'applications web et de sites statiques",
+    "category": "Infrastructure",
+    "website": "https://www.netlify.com/",
+    "rules": {
+      "headers": [
+        { "name": "server", "pattern": "Netlify" },
+        { "name": "x-nf-request-id", "pattern": "^[A-Z0-9]{26}$" }
+      ],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "cloudflare",
+    "name": "Cloudflare",
+    "description": "Service de sécurité et de performance pour les sites web",
+    "category": "Infrastructure",
+    "website": "https://www.cloudflare.com/",
+    "rules": {
+      "headers": [{ "name": "server", "pattern": "cloudflare" }],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "cloudflare-insights",
+    "name": "Cloudflare Insights",
+    "description": "Service d'analyse web de Cloudflare pour suivre et rapporter le trafic des sites web",
+    "category": "Analytics",
+    "website": "https://www.cloudflare.com/insights/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": ["https://static\\.cloudflareinsights\\.com/beacon\\.min\\.js"],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "supabase",
+    "name": "Supabase",
+    "description": "Plateforme BaaS open-source pour le développement d'applications web et mobiles",
+    "category": "Backend",
+    "website": "https://supabase.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": ["^sb-[A-Za-z0-9_-]+-auth-token$", "sb-"],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "firebase",
+    "name": "Firebase",
+    "description": "Plateforme BaaS de Google pour le développement d'applications web et mobiles",
+    "category": "Backend",
+    "website": "https://firebase.google.com/",
+    "rules": {
+      "headers": [{ "name": "server", "pattern": "FirebaseHosting" }],
+      "meta": [],
+      "scripts": [],
+      "links": [],
+      "cookies": ["session", "__session"],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "google-analytics",
+    "name": "Google Analytics",
+    "description": "Service d'analyse web de Google pour suivre et rapporter le trafic des sites web",
+    "category": "Analytics",
+    "website": "https://analytics.google.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "script_contents": [
+        "gtag\\s*\\(",
+        "googletagmanager",
+        "ga\\s*\\('create'|ga\\s*\\(\"create\""
+      ],
+      "scripts": ["gtag", "googletagmanager", "analytics\\.js", "ga\\.js"],
+      "links": [],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "google-fonts",
+    "name": "Google Fonts",
+    "description": "Service de polices web de Google pour intégrer des polices personnalisées dans les sites web",
+    "category": "Frontend",
+    "website": "https://fonts.google.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": ["fonts\\.googleapis\\.com", "fonts\\.gstatic\\.com"],
+      "cookies": [],
+      "html_classes": [],
+      "attributes": []
+    }
+  },
+  {
+    "id": "fontawesome",
+    "name": "Font Awesome",
+    "description": "Collection de icônes vectorielles pour les sites web",
+    "category": "Frontend",
+    "website": "https://fontawesome.com/",
+    "rules": {
+      "headers": [],
+      "meta": [],
+      "scripts": [],
+      "links": ["https://kit\\.fontawesome\\.com", "https://use\\.fontawesome\\.com"],
+      "cookies": [],
+      "html_classes": ["fa-solid", "fa-brands", "fa-regular", "fa-light"],
+      "attributes": []
+    }
+  }
+]
